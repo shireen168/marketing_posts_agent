@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 import sys
-from project1_researcher.crew import Project1ResearcherCrew
+from research_agent.crew import ResearchAgentCrew
 
 # This main file is intended to be a way for you to run your
 # crew locally, so refrain from adding unnecessary logic into this file.
@@ -12,9 +12,9 @@ def run():
     Run the crew.
     """
     inputs = {
-        'topic': 'AI LLMs'
+        "topic": "Agentic AI"
     }
-    Project1ResearcherCrew().crew().kickoff(inputs=inputs)
+    ResearchAgentCrew().crew().kickoff(inputs=inputs)
 
 
 def train():
@@ -22,10 +22,10 @@ def train():
     Train the crew for a given number of iterations.
     """
     inputs = {
-        "topic": "AI LLMs"
+        "topic": "Agentic AI"
     }
     try:
-        Project1ResearcherCrew().crew().train(n_iterations=int(sys.argv[1]), filename=sys.argv[2], inputs=inputs)
+        ResearchAgentCrew().crew().train(n_iterations=int(sys.argv[1]), filename=sys.argv[2], inputs=inputs)
 
     except Exception as e:
         raise Exception(f"An error occurred while training the crew: {e}")
@@ -35,7 +35,7 @@ def replay():
     Replay the crew execution from a specific task.
     """
     try:
-        Project1ResearcherCrew().crew().replay(task_id=sys.argv[1])
+        ResearchAgentCrew().crew().replay(task_id=sys.argv[1])
 
     except Exception as e:
         raise Exception(f"An error occurred while replaying the crew: {e}")
@@ -45,10 +45,10 @@ def test():
     Test the crew execution and returns the results.
     """
     inputs = {
-        "topic": "AI LLMs"
+        "topic": "Agentic AI"
     }
     try:
-        Project1ResearcherCrew().crew().test(n_iterations=int(sys.argv[1]), openai_model_name=sys.argv[2], inputs=inputs)
+        ResearchAgentCrew().crew().test(n_iterations=int(sys.argv[1]), openai_model_name=sys.argv[2], inputs=inputs)
 
     except Exception as e:
         raise Exception(f"An error occurred while replaying the crew: {e}")

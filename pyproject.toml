@@ -9,11 +9,11 @@ dependencies = [
 ]
 
 [project.scripts]
-project1_researcher = "project1_researcher.main:run"
-run_crew = "project1_researcher.main:run"
-train = "project1_researcher.main:train"
-replay = "project1_researcher.main:replay"
-test = "project1_researcher.main:test"
+research_agent = "research_agent.main:run"
+run_crew = "research_agent.main:run"
+train = "research_agent.main:train"
+replay = "research_agent.main:replay"
+test = "research_agent.main:test"
 
 [build-system]
 requires = ["hatchling"]
