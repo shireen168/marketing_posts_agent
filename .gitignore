@@ -1,9 +1,8 @@
-venv/
-env/
-.env
-
-# Lock Files
-uv.lock
+# Poetry
+.poetry/
+poetry.lock
+dist/
+*.egg-info/
 
 # Python
 __pycache__/
@@ -13,7 +12,6 @@ __pycache__/
 .Python
 build/
 develop-eggs/
-dist/
 downloads/
 eggs/
 .eggs/
@@ -23,16 +21,28 @@ parts/
 sdist/
 var/
 wheels/
-*.egg-info/
-.installed.cfg
 *.egg
+.installed.cfg
+MANIFEST
 
-# IDE
+# Virtual Environments
+.env
+.venv
+env/
+venv/
+ENV/
+
+# IDE specific files
 .idea/
 .vscode/
 *.swp
 *.swo
-
-# OS
 .DS_Store
-Thumbs.db
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Testing
+.coverage
+.pytest_cache/
+htmlcov/

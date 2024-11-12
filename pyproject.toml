@@ -1,20 +1,21 @@
-[project]
-name = "research_agent"
+[tool.poetry]
+name = "marketing_posts"
 version = "0.1.0"
-description = "research_agent using crewAI"
-authors = [{ name = "Shireen", email = "shireenlowyk@gmail.com" }]
-requires-python = ">=3.10,<=3.13"
-dependencies = [
-    "crewai[tools]>=0.76.9,<1.0.0"
-]
+description = "marketing-posts using crewAI"
+authors = ["Shireen <shireenlowyk@gmail.com>"]
 
-[project.scripts]
-research_agent = "research_agent.main:run"
-run_crew = "research_agent.main:run"
-train = "research_agent.main:train"
-replay = "research_agent.main:replay"
-test = "research_agent.main:test"
+[tool.poetry.dependencies]
+python = ">=3.10,<3.13"
+crewai = { extras = ["tools"], version = "^0.35.8" }
+crewai-tools = "^0.4.6"
+chromadb = ">=0.4.22,<0.5.0"
+pydantic = ">=2.4.2,<3.0.0"
+setuptools = "^75.4.0"
+
+[tool.poetry.scripts]
+marketing_posts = "marketing_posts.main:run"
+train = "marketing_posts.main:train"
 
 [build-system]
-requires = ["hatchling"]
-build-backend = "hatchling.build"
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

@@ -1,6 +1,6 @@
-# research_agent Crew
+# marketing_posts Crew
 
-Welcome to the research_agent Crew project, powered by [crewAI](https://crewai.com). This template is designed to help you set up a multi-agent AI system with ease, leveraging the powerful and flexible framework provided by crewAI. Our goal is to enable your agents to collaborate effectively on complex tasks, maximizing their collective intelligence and capabilities.
+Welcome to the marketing_posts Crew project, powered by [crewAI](https://crewai.com). This template is designed to help you set up a multi-agent AI system with ease, leveraging the powerful and flexible framework provided by crewAI. Our goal is to enable your agents to collaborate effectively on complex tasks, maximizing their collective intelligence and capabilities.
 
 ## Installation
 
@@ -22,26 +22,26 @@ crewai install
 
 **Add your `OPENAI_API_KEY` into the `.env` file**
 
-- Modify `src/research_agent/config/agents.yaml` to define your agents
-- Modify `src/research_agent/config/tasks.yaml` to define your tasks
-- Modify `src/research_agent/crew.py` to add your own logic, tools and specific args
-- Modify `src/research_agent/main.py` to add custom inputs for your agents and tasks
+- Modify `src/marketing_posts/config/agents.yaml` to define your agents
+- Modify `src/marketing_posts/config/tasks.yaml` to define your tasks
+- Modify `src/marketing_posts/crew.py` to add your own logic, tools and specific args
+- Modify `src/marketing_posts/main.py` to add custom inputs for your agents and tasks
 
 ## Running the Project
 
 To kickstart your crew of AI agents and begin task execution, run this from the root folder of your project:
 
 ```bash
-$ crewai run
+$ poetry run python marketing_posts
 ```
 
 This command initializes the research_agent Crew, assembling the agents and assigning them tasks as defined in your configuration.
 
-This example, unmodified, will run the create a `report.md` file with the output of a research on LLMs in the root folder.
+This example, unmodified, will run the create a `marketing_copies.md` file with the output of a research on LLMs in the root folder.
 
 ## Understanding Your Crew
 
-The research_agent Crew is composed of multiple AI agents, each with unique roles, goals, and tools. These agents collaborate on a series of tasks, defined in `config/tasks.yaml`, leveraging their collective skills to achieve complex objectives. The `config/agents.yaml` file outlines the capabilities and configurations of each agent in your crew.
+The marketing_posts Crew is composed of multiple AI agents, each with unique roles, goals, and tools. These agents collaborate on a series of tasks, defined in `config/tasks.yaml`, leveraging their collective skills to achieve complex objectives. The `config/agents.yaml` file outlines the capabilities and configurations of each agent in your crew.
 
 ## Support
 
